@@ -1,0 +1,6 @@
+module.exports.auctionController = require("./auction.controller")
+module.exports.publisherController = require('./publisher.controller')
+module.exports.endpointController = require('./endpoint.controller')
+module.exports.deviceController = require('./device.controller')
+module.exports.dealController = require('./deal.controller')
+module.exports.reportController = require('./report.controller')

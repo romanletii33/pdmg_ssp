@@ -1,0 +1,1 @@
+cd dsp3 && node server.js

@@ -1,0 +1,5 @@
+module.exports.publisherValidator = require("./publisher.validator")
+module.exports.endpointValidator = require("./endpoint.validator")
+module.exports.deviceValidator = require("./device.validator")
+module.exports.dealValidator = require("./deal.validator")
+module.exports.reportValidator = require("./report.validator")

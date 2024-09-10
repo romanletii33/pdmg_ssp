@@ -1,0 +1,671 @@
+{
+	"info": {
+		"_postman_id": "352866aa-3f34-4212-b7f9-e2ee264c16cd",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36703571"
+	},
+	"item": [
+		{
+			"name": "Add Publisher",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"isActive\": \"Y\",\"domain\": \"softserve.com\",\"company\": \"softserver\",\"contactName\": \"softserver\",\"contactEmail\": \"passionatedev34@outlook.com\",\"contactPhone\": \"3802565753576\",\"taxId\": \"672_xqewr\",\"address\": \"Lviv, in Ukraine\",\"city\": \"Lviv\",\"state\": \"Lviv\",\"postalCode\": \"3455768\",\"publisherMinFloorPrice\": \"0.8\",\"auctionType\": \"1\",\"privateAuction\": 1}"
+				},
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher"
+					]
+				}
+			}
+		},
+		{
+			"name": "Update publisher",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"isActive\": \"Y\",\"domain\": \"softserve.com\",\"company\": \"softserver\",\"contactName\": \"softserver\",\"contactEmail\": \"passionatedev34@outlook.com\",\"contactPhone\": \"3802565753576\",\"taxId\": \"672_xqewr\",\"address\": \"Lviv, in Ukraine\",\"city\": \"Lviv\",\"state\": \"Lviv\",\"postalCode\": \"3455768\",\"publisherMinFloorPrice\": \"0.8\",\"auctionType\": \"1\",\"privateAuction\": 0}"
+				},
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher/0d123c81-2a14-4b61-8a84-cbd5c8a6ba76",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher",
+						"0d123c81-2a14-4b61-8a84-cbd5c8a6ba76"
+					]
+				}
+			}
+		},
+		{
+			"name": "Get publisher list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher/list/1/3",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher",
+						"list",
+						"1",
+						"3"
+					]
+				}
+			}
+		},
+		{
+			"name": "Get a publisher",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher/0d123c81-2a14-4b61-8a84-cbd5c8a6ba76",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher",
+						"0d123c81-2a14-4b61-8a84-cbd5c8a6ba76"
+					]
+				}
+			}
+		},
+		{
+			"name": "Delete a publisher",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher/0d123c81-2a14-4b61-8a84-cbd5c8a6ba76",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher",
+						"0d123c81-2a14-4b61-8a84-cbd5c8a6ba76"
+					]
+				}
+			}
+		},
+		{
+			"name": "Add endpoint",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"dspEndpointUrl\": \"http://localhost:8000/dsp\",\"queriesPerSecond\": 90,\"prefilterGeoCountry\": [\"en\",\"ua\",\"us\"],\"prefilterMaxBidPrice\": 1.42,\"isActive\": \"Y\"}"
+				},
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher/719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0/endpoint",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher",
+						"719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0",
+						"endpoint"
+					]
+				}
+			}
+		},
+		{
+			"name": "Update endpoint",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"dspEndpointUrl\": \"http://localhost:8001/dsp\",\"queriesPerSecond\": 90,\"prefilterGeoCountry\": [\"en\",\"ua\",\"us\"],\"prefilterMaxBidPrice\": 1.44,\"isActive\": \"Y\"}"
+				},
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher/719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0/endpoint/7bfabc3a-34f1-48e7-a27a-b9cb930ff877",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher",
+						"719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0",
+						"endpoint",
+						"7bfabc3a-34f1-48e7-a27a-b9cb930ff877"
+					]
+				}
+			}
+		},
+		{
+			"name": "Get endpoint list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher/719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0/endpoint/list/1/3",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher",
+						"719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0",
+						"endpoint",
+						"list",
+						"1",
+						"3"
+					]
+				}
+			}
+		},
+		{
+			"name": "Get an endpoint",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher/719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0/endpoint/c2ddf394-66e1-44ca-a28f-ac5c29f81d77",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher",
+						"719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0",
+						"endpoint",
+						"c2ddf394-66e1-44ca-a28f-ac5c29f81d77"
+					]
+				}
+			}
+		},
+		{
+			"name": "Delete an endpoint",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher/719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0/endpoint/c2ddf394-66e1-44ca-a28f-ac5c29f81d77",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher",
+						"719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0",
+						"endpoint",
+						"c2ddf394-66e1-44ca-a28f-ac5c29f81d77"
+					]
+				}
+			}
+		},
+		{
+			"name": "Add device",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"isVideo\": \"N\",\"isImage\": \"Y\",\"isActive\": \"Y\",\"taxonomy\": \"abc_0224\",\"venuetypeIds\": [\"1\",\"301\"],\"impsPerSpot\": 0.95}"
+				},
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher/719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0/device",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher",
+						"719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0",
+						"device"
+					]
+				}
+			}
+		},
+		{
+			"name": "Update device",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"isVideo\": \"N\",\"isImage\": \"Y\",\"isActive\": \"Y\",\"taxonomy\": \"abc_0224\",\"venuetypeIds\": [\"1\",\"301\"],\"impsPerSpot\": 0.95}"
+				},
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher/719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0/device/53e9e909-6d11-4816-aea6-4d896b1e5d4a",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher",
+						"719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0",
+						"device",
+						"53e9e909-6d11-4816-aea6-4d896b1e5d4a"
+					]
+				}
+			}
+		},
+		{
+			"name": "Get device list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher/719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0/device/list/1/3",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher",
+						"719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0",
+						"device",
+						"list",
+						"1",
+						"3"
+					]
+				}
+			}
+		},
+		{
+			"name": "Get a device",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher/719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0/device/c2ddf394-66e1-44ca-a28f-ac5c29f81d77",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher",
+						"719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0",
+						"device",
+						"c2ddf394-66e1-44ca-a28f-ac5c29f81d77"
+					]
+				}
+			}
+		},
+		{
+			"name": "Delete a device",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher/719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0/device/c2ddf394-66e1-44ca-a28f-ac5c29f81d77",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher",
+						"719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0",
+						"device",
+						"c2ddf394-66e1-44ca-a28f-ac5c29f81d77"
+					]
+				}
+			}
+		},
+		{
+			"name": "Add deal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"isActive\": \"Y\",\"bidfloor\": 1.23,\"auctionType\": \"1\"}"
+				},
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher/719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0/deal",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher",
+						"719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0",
+						"deal"
+					]
+				}
+			}
+		},
+		{
+			"name": "Update deal",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"isActive\": \"Y\",\"bidfloor\": 1.23,\"auctionType\": \"2\"}"
+				},
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher/719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0/deal/53e9e909-6d11-4816-aea6-4d896b1e5d4a",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher",
+						"719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0",
+						"deal",
+						"53e9e909-6d11-4816-aea6-4d896b1e5d4a"
+					]
+				}
+			}
+		},
+		{
+			"name": "Get deal list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher/719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0/deal/list/1/3",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher",
+						"719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0",
+						"deal",
+						"list",
+						"1",
+						"3"
+					]
+				}
+			}
+		},
+		{
+			"name": "Get a deal",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher/719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0/deal/c2ddf394-66e1-44ca-a28f-ac5c29f81d77",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher",
+						"719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0",
+						"deal",
+						"c2ddf394-66e1-44ca-a28f-ac5c29f81d77"
+					]
+				}
+			}
+		},
+		{
+			"name": "Delete a deal",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/publisher/719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0/deal/c2ddf394-66e1-44ca-a28f-ac5c29f81d77",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"publisher",
+						"719d3dcd-e6ee-45d9-a8ec-7fc5f40a73c0",
+						"deal",
+						"c2ddf394-66e1-44ca-a28f-ac5c29f81d77"
+					]
+				}
+			}
+		},
+		{
+			"name": "Report",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/report/bc837b49-ebe1-4679-b76a-724bdcb85ef5",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"report",
+						"bc837b49-ebe1-4679-b76a-724bdcb85ef5"
+					]
+				}
+			}
+		},
+		{
+			"name": "Auction",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "3yT7jN9sBdR5fQgP2mW6uE4zA8cV1xX0"
+					}
+				],
+				"url": {
+					"raw": "http://172.31.21.171:8000/api/v1/auction?publisher_id=bc837b49-ebe1-4679-b76a-724bdcb85ef5&&device_id=26cdd8d6-d84b-4374-b972-f6b1c799e4bc&&ad_unit_id=1",
+					"protocol": "http",
+					"host": [
+						"172.31.21.171:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auction"
+					],
+					"query": [
+            {
+              "key": "publisher_id",
+              "value": "bc837b49-ebe1-4679-b76a-724bdcb85ef5"
+            },
+            {
+              "key": "device_id",
+              "value": "26cdd8d6-d84b-4374-b972-f6b1c799e4bc"
+            },
+            {
+              "key": "ad_unit_id",
+              "value": "1"
+            }
+          ]
+				}
+			}
+		}
+	]
+}

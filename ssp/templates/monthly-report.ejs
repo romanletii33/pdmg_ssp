@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monthly Report</title>
+</head>
+
+<body>
+  <div class="report-body">
+    <p>Hello,<br>
+      Here is a report with last month's numbers:</p>
+    <table class="report-table">
+      <thead>
+        <tr>
+          <th style="text-align: left; border: 1px solid black; padding: 5px 10px;">Publisher</th>
+          <th style="text-align: left; border: 1px solid black; padding: 5px 10px;">Publisher Name</th>
+          <th style="text-align: left; border: 1px solid black; padding: 5px 10px;">Month</th>
+          <th style="text-align: left; border: 1px solid black; padding: 5px 10px;">Endpoint</th>
+          <th style="text-align: left; border: 1px solid black; padding: 5px 10px;">Total bids</th>
+          <th style="text-align: left; border: 1px solid black; padding: 5px 10px;">Total requests</th>
+          <th style="text-align: left; border: 1px solid black; padding: 5px 10px;">Total wins</th>
+          <th style="text-align: left; border: 1px solid black; padding: 5px 10px;">Total win price</th>
+          <th style="text-align: left; border: 1px solid black; padding: 5px 10px;">Avg win price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach((row, i)=> {%>
+          <% if (i!==data.length-1) {%>  
+            <tr>
+              <% if (i===0) { %>
+              <td style="width: 100px; text-align: center; border: 1px solid black; padding: 5px 10px;"
+                rowspan="<%= rowspan %>">
+                <%= row.publisher_id %>
+              </td>
+              <td style="width: 70px; text-align: center; border: 1px solid black; padding: 5px 10px;"
+                rowspan="<%= rowspan %>">
+                <%= row.publisher_name %>
+              </td>
+              <td rowspan="<%= rowspan %>" style="text-align: left; border: 1px solid black; padding: 5px 10px;">
+                <%= row.date %>
+              </td>
+              <% }%>
+              <td style="text-align: left; border: 1px solid black; padding: 5px 10px;">
+                <%= row.endpoint_id %>
+              </td>
+              <td style="text-align: right; border: 1px solid black; padding: 5px 10px;">
+                <%= row.total_bids %>
+              </td>
+              <td style="text-align: right; border: 1px solid black; padding: 5px 10px;">
+                <%= row.total_requests %>
+              </td>
+              <td style="text-align: right; border: 1px solid black; padding: 5px 10px;">
+                <%= row.total_wins %>
+              </td>
+              <td style="text-align: right; border: 1px solid black; padding: 5px 10px;">
+                <%= row.total_win_price %>
+              </td>
+              <td style="text-align: right; border: 1px solid black; padding: 5px 10px;">
+                <%= row.avg_win_price %>
+              </td>
+            </tr>
+          <% } %>
+        <% })%>
+      </tbody>
+    </table>
+    <p>Finally, please find attached to this email a monthly_report_<%= data[data.length-1].date %>.csv file with the same report</p>
+    <p>
+      Best regards,<br>
+      ProData Media Yield Ops
+    </p>
+  </div>
+</body>
+
+</html>
